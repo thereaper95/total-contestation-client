@@ -2,46 +2,45 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Espace Client - Contestation</title>
+  <title>Connexion - Espace Client</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
-    header {
-      background-color: #e60000;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    main {
-      padding: 30px;
-      max-width: 800px;
-      margin: auto;
+    .login-container {
       background: white;
-      border-radius: 10px;
-      margin-top: 30px;
+      padding: 30px;
+      border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    h2 {
+      text-align: center;
+      color: #e60000;
     }
     label {
-      display: block;
       margin-top: 15px;
+      display: block;
     }
-    select, input, textarea {
+    input {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
-      border-radius: 5px;
       border: 1px solid #ccc;
+      border-radius: 5px;
     }
     button {
       margin-top: 20px;
-      padding: 12px 20px;
+      width: 100%;
       background-color: #e60000;
       color: white;
+      padding: 10px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -52,38 +51,7 @@
   </style>
 </head>
 <body>
-
-<header>
-  <h1>Espace Client TotalEnergies</h1>
-  <h2>Formulaire de Contestation</h2>
-</header>
-
-<main>
-  <form action="#" method="POST">
-    <label for="type-contestation">Type de contestation :</label>
-    <select id="type-contestation" name="type-contestation" required>
-      <option value="">-- Sélectionner --</option>
-      <option value="frais">Frais</option>
-      <option value="index">Index</option>
-    </select>
-
-    <label for="moment-vie">Moment de la vie du contrat :</label>
-    <select id="moment-vie" name="moment-vie" required>
-      <option value="">-- Sélectionner --</option>
-      <option value="debut">Début de vie</option>
-      <option value="cours">En cours de vie</option>
-      <option value="fin">Fin de vie</option>
-    </select>
-
-    <label for="details">Détails de la contestation :</label>
-    <textarea id="details" name="details" rows="6" placeholder="Expliquez les raisons de votre contestation..." required></textarea>
-
-    <label for="justificatif">Joindre un justificatif (optionnel) :</label>
-    <input type="file" id="justificatif" name="justificatif">
-
-    <button type="submit">Envoyer la contestation</button>
-  </form>
-</main>
-
-</body>
-</html>
+  <div class="login-container">
+    <h2>Connexion Client</h2>
+    <form onsubmit="return login(event)">
+      <label for="email">Adresse email</
